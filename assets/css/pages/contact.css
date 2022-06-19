@@ -65,7 +65,7 @@ img{
     line-height: 16rem;
 }
 .form a{
-    margin: 0 auto;
+    margin: 1rem auto 0 auto;
     width: 45%;
     color: var(--white);
     background-color: #004481;
