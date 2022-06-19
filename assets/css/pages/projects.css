@@ -2,61 +2,65 @@
 .hero{
     height: 80rem;
 }
-/* Services */
-.main__content{
+/* Main */
+.main{
     position: relative;
-    z-index: 2;
     margin-top: -32rem;
+    z-index: 1;
 }
-.pagination{
-    margin-top: 5rem;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.products__cards{
+.main__block_cards{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-    gap: 7rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
 }
-.products__card{
-    padding: 3rem 0 1rem 0;
-    border-radius: 1rem;
-    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
-  }
-  .products__card img{
-    max-width: 80%;
-  }
-  .products__card span{
-    display: block;
-    font-weight: 500;
-    font-size: 2.3rem;
-    color: #999999;
-  }
-  .products__card span:nth-child(3){
-    width: 60%;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    color: #4D4D4D;
-  }
-  .products__card_price{
+.main__block_img > img{
+    width: 70%;
+}
+.main__block_card{
+    text-align: center;
+}
+.main__block_card_top,
+.main__block_img{
     position: relative;
     display: inline-block;
-  }
-  .products__card_price span{
-    font-weight: 900;
-    font-size: 3rem;
+}
+.main__block_card_top span{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2.5rem;
     color: var(--white);
     position: absolute;
-    top: 54%;
+    top: 52%;
     left: 52%;
     transform: translate(-50%, -50%);
-  }
-
-  /* Gallery */
+}
+.main__block_img span{
+    font-weight: 500;
+    font-size: 2.8rem;
+    color: var(--white);
+    position: absolute;
+    bottom: 7%;
+    left: 53.5%;
+    transform: translate(-50%, -50%);
+}
+.main__block_text{
+    margin: 0 auto;
+    width: 70%;
+    padding: 4rem 0;
+    text-align: center;
+    font-size: 2.1rem;
+    color: #606060;
+    font-weight: 300;
+}
+.main__cards_img{
+    position: absolute;
+    top: 35%;
+    right: -20rem;
+    z-index: -1;
+    transform: rotate(-90deg);
+    max-width: 100%;
+}
+/* Gallery */
 .gallery{
     display: grid;
     grid-template-columns: repeat(9, 1fr);
