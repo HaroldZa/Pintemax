@@ -188,6 +188,8 @@
 }
 .team__card_expand {
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .team__card_expand {
