@@ -1,0 +1,161 @@
+/* Hero */
+.hero {
+    height: 80rem;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* Main */
+.main{
+    position: relative;
+    z-index: 1;
+    margin-top: -25rem;
+}
+.main__content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    column-gap: 5rem;
+    padding: 0 5rem;
+}
+.main__content > img{
+    width: 90%;
+}
+.main__form{
+    width: 85%;
+}
+.main__text{
+    margin: 0 auto;
+    text-align: center;
+}
+.main__text h4{
+    font-family: BuloRounded-Black;
+    font-size: 3.3rem;
+    color: #004481;
+}
+.main__text p{
+    padding: 1rem 0 6rem 0;
+    width: 30rem;
+    margin: 0 auto;
+    font-family: Gotham-book;
+    color: #7D869B;
+    font-weight: 400;
+    font-size: 2rem;
+}
+.form{
+    display: grid;
+    row-gap: 2.7rem;
+}
+.form input{
+    padding: 1.5rem;
+}
+.form input::-webkit-input-placeholder {
+    text-align: center;
+    line-height: 16rem;
+}
+.form__accept input[type=checkbox] {
+    accent-color: #004481;
+}
+.btn_check {
+    display: block;
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .btn_check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    width: 2rem;
+    background-color: #fff;
+    border: 1px black solid;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .btn_check input ~ .checkmark {
+    background-color: #7D869B;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .btn_check input:checked ~ .checkmark {
+    background-color: #002B4E;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .btn_check input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .btn_check .checkmark:after {
+    left: 30%;
+    top: 18%;
+    width: 5px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
+  }
+
+  .form__accept{
+    display: flex;
+    align-items: center;
+  }
+.form__accept p{
+    font-family: Gotham-book;
+    font-weight: 400;
+    font-size: 1.8rem;
+    padding-left: .7rem;
+    color: #7D869B;
+}
+.form__btn{
+    margin: 1rem auto 0 auto;
+    width: 42%;
+    background-color: #004481;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+.form__btn a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+.form p{
+    font-family: Gotham-book;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #7D869B;
+    margin: 0;
+}
+.footer{
+    margin-top: 0;
+}
