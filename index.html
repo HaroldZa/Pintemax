@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/pages/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/libs/slick.css">
 </head>
 
 <body>
     <header class="hero">
-        <nav class="hero__nav container">
+        <!-- Menu -->
+        <nav class="hero__nav container desktop">
             <a href="index.html"><img id="hero__logo" src="assets/images/l_1.png" alt="Pintemax"></a>
             <div id="hero__nav_menu">
                 <a href="servicios.html">Servicios</a>
@@ -35,46 +37,150 @@
                 </div>
             </div>
         </nav>
+        <!-- End Menu -->
+        
+        <!-- Menu mobile -->
+        <div class="menu mobile">
+            <h4 style="text-align: center; margin-bottom: 2rem;">Menu</h4>
+            <p><a href="index.php">Inicio</a></p>
+            <p class="submenu">Programación</p>
+            <div class="menu__submenu">
+                <li><a href="desarrollo-de-plataformas.php">Plataformas</a></li>
+                <li><a href="desarrollo-de-blockchain.php">Blockchain</a></li>
+                <li><a href="desarrollo-de-apps.php">APP's</a></li>
+                <li><a href="desarrollo-de-paginas-web.php">Páginas web</a></li>
+            </div>
+            <p class="submenu">Marketing</p>
+            <div class="menu__submenu">
+                <li><a href="posicionamiento-seo-en-las-palmas.php">Posicionamiento SEO</a></li>
+                <li><a href="comunnity-manager.php">Community Manager</a></li>
+                <li><a href="email-marketing.php">Email Marketing</a></li>
+                <li><a href="posicionamiento-sem-en-las-palmas.php">Posicionamiento SEM</a></li>
+            </div>
+            <p class="submenu">Diseño Gráfico</p>
+            <div class="menu__submenu">
+                <li><a href="diseno-grafico-ui-uix.php">Diseño de plataformas</a></li>
+                <li><a href="video-maker.php">Video Maker</a></li>
+            </div>
+            <p><a href="subvenciones.php">Subvenciones</a></p>
+            <div class="footer__menu_mobile">
+                <img class="menu_logo" src="assets/images/logo_b.png" alt="">
+                <div class="footer__icons">
+                    <ul class="icons">
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/icon2.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/icon3.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/icon4.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="menu__toggler mobile"><span></span></div>
+        <div class="hero__nav_mobile mobile">
+            <a id="hero__logo_mobile" class="mobile" href="index.html">
+                <img src="assets/images/logo_mob.png" alt="Pintemax">
+            </a>
+            <div id="hero__options_icons">
+                <img src="assets/images/icons/ic_1.png" alt="">
+                <img src="assets/images/icons/ic_2.png" alt="">
+                <img src="assets/images/icons/ic_3.png" alt="">
+            </div>
+        </div>
+        <!-- End Menu Mobile -->
 
+        <!-- Slider -->
         <section id="slider" class="container">
-            <div class="carousel">
+            <div class="carousel desktop">
                 <div class="carousel-item row align-items-center hero__card">
                     <div class="hero__card_text col-md-7 ">
-                        <h2 id="hero__card_title">Lorem ipsum</h2>
-                        <p id="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        <h2 class="hero__card_title">Lorem ipsum</h2>
+                        <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna</p>
-                        <a id="hero__card_btn" href="#">ver más</a>
+                        <a class="hero__card_btn" href="#">ver más</a>
                     </div>
                     <div class="hero__card_img col-md-5">
                         <img src="assets/images/p_1.png" alt="">
                     </div>
                 </div>
-                <div class="carousel-item row hero__card">
-                    <div class="hero__card_text col-md-7">
-                        <h2 id="hero__card_title">2orem ipsum</h2>
-                        <p id="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                <div class="carousel-item row align-items-center hero__card">
+                    <div class="hero__card_text col-md-7 ">
+                        <h2 class="hero__card_title">Lorem ipsum</h2>
+                        <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna</p>
-                        <a id="hero__card_btn" href="#">ver más</a>
+                        <a class="hero__card_btn" href="#">ver más</a>
                     </div>
                     <div class="hero__card_img col-md-5">
                         <img src="assets/images/p_1.png" alt="">
                     </div>
                 </div>
-                <div class="carousel-item row hero__card">
-                    <div class="hero__card_text col-md-7">
-                        <h2 id="hero__card_title">3orem ipsum</h2>
-                        <p id="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                <div class="carousel-item row align-items-center hero__card">
+                    <div class="hero__card_text col-md-7 ">
+                        <h2 class="hero__card_title">Lorem ipsum</h2>
+                        <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna</p>
-                        <a id="hero__card_btn" href="#">ver más</a>
+                        <a class="hero__card_btn" href="#">ver más</a>
                     </div>
                     <div class="hero__card_img col-md-5">
                         <img src="assets/images/p_1.png" alt="">
                     </div>
                 </div>
             </div>
-        </section>
 
-        <img class="hero__icon" src="assets/images/icons/w_1.png" alt="">
+            <!-- Slider mobile -->
+            <div id="hero__options_catalog" class="mobile">Catalogo virtual</div>
+            <div class="swiper mySwiper mobile">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide row hero__card">
+                    <div class="hero__card_text col-xs-7 ">
+                        <h2 class="hero__card_title">Lorem ipsum</h2>
+                        <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna</p>
+                        <a class="hero__card_btn" href="#">ver más</a>
+                    </div>
+                    <div class="hero__card_img col-xs-5">
+                        <img src="assets/images/p_1.png" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide row hero__card">
+                    <div class="hero__card_text col-xs-7 ">
+                        <h2 class="hero__card_title">Lorem ipsum</h2>
+                        <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna</p>
+                        <a class="hero__card_btn" href="#">ver más</a>
+                    </div>
+                    <div class="hero__card_img col-xs-5">
+                        <img src="assets/images/p_1.png" alt="">
+                    </div>
+                  </div>
+                  <div class="swiper-slide row hero__card">
+                    <div class="hero__card_text col-xs-7 ">
+                        <h2 class="hero__card_title">Lorem ipsum</h2>
+                        <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna</p>
+                        <a class="hero__card_btn" href="#">ver más</a>
+                    </div>
+                    <div class="hero__card_img col-xs-5">
+                        <img src="assets/images/p_1.png" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper__btn">
+                    <div class="hero__btn_slider_prev"></div>
+                    <div class="hero__btn_slider_next"></div>
+                </div>
+              </div>
+            <!-- End Slider mobile -->
+        </section>
+        <!-- End Slider -->
+        <img class="hero__icon desktop" src="assets/images/icons/w_1.png" alt="">
         <div class="hero__svg"></div>
     </header>
 
@@ -85,26 +191,25 @@
                 <div class="main__img_text">¡Si tienes un <span>GRAN</span> proyecto te haremos un <span>GRAN</span>
                     presupuesto a medida!</div>
             </div>
-            <img class="main__cards_img" src="assets/images/p_2.png" alt="">
+            <img class="main__cards_img img_desktop" src="assets/images/p_2.png" alt="">
             <div class="main__cards row">
-                <div class="main__card col-md-3">
+                <div class="main__card col-xs-6 col-md-3">
                     <img class="main__card_img" src="assets/images/i_2.png" alt="">
                     <p class="main__card_paragraph">Experiencia</p>
                 </div>
-                <div class="main__card col-md-3">
+                <div class="main__card col-xs-6 col-md-3">
                     <img class="main__card_img" src="assets/images/i_3.png" alt="">
                     <p class="main__card_paragraph">Asesoramiento</p>
                 </div>
-                <div class="main__card col-md-3">
+                <div class="main__card col-xs-6 col-md-3">
                     <img class="main__card_img" src="assets/images/i_4.png" alt="">
                     <p class="main__card_paragraph">Preparación de pinturas</p>
                 </div>
-                <div class="main__card col-md-3">
+                <div class="main__card col-xs-6 col-md-3">
                     <img class="main__card_img" src="assets/images/i_5.png" alt="">
                     <p class="main__card_paragraph">Pintura Profesional</p>
                 </div>
-            </div>
-            
+            </div>        
         </div>
 
         <section class="main__section container">
@@ -137,7 +242,7 @@
         </div>
     </section>
 
-    <section class="slider_cards">
+    <section class="slider_cards" id="slider_top">
         <div class="swiper-button-prev swiper-navBtn"></div>
             <div class="slide-container swiper">
                 <div class="slide-content">
@@ -170,12 +275,13 @@
                     </div>
                 </div>
             </div>
+            <img class="main__cards_img img_mobile" src="assets/images/p_2.png" alt="">
         <div class="swiper-button-next swiper-navBtn"></div>
     </section>
 
     <section class="reviews">
         <div class="reviews__content container">
-            <div class="main__review ">
+            <div class="main__review">
                 <!-- Desktop -->
                 <div class="slider slider-for"></div>
                 <div class="slider__content">
@@ -241,6 +347,10 @@
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie </p>
                         </div>
                     </div>
+                </div>
+                <div class="slider_btn">
+                    <img onclick="moveSlide(-1)" class="rev_prev icon_mobile" src="assets/images/icons/rev_prev.png" alt="">
+                    <img onclick="moveSlide(1)" class="rev_next icon_mobile" src="assets/images/icons/rev_next.png" alt="">
                 </div>
                 <!-- End Desktop -->
             </div>
@@ -334,12 +444,13 @@
     </section>
 
     <section class="contact">
+        <img class="hero__icon mobile" src="assets/images/icons/w_1.png" alt="">
         <div class="contact__content container">
             <h2>¡Novedades y promociones <span>en un paso!</span></h2>
             <div class="contact__form">
                 <input type="text" placeholder="Nombre">
                 <input type="email" placeholder="E-mail">
-                <a href="#">¡Quiero ser el primero!</a>
+                <div><a href="#">¡Quiero ser el primero!</a></div>
             </div>
             <div class="contact__terms">
                 <input type="checkbox">
@@ -374,7 +485,7 @@
 
     <footer class="footer">
         <div class="footer__border"></div>
-        <div class="footer__content container">
+        <div class="footer__content footer__desktop container">
             <div class="footer__work">
                 <h4>Trabaja con nosotros</h4>
                 <span>¿Te unes al equipo?</span>
@@ -399,13 +510,66 @@
             </div>
             <span class="footer__copyright">© 2021 Pintemax- Todos los derechos reservados</span>
         </div>
+
+        <div class="footer__content footer__mobile container">
+                <div class="footer__work">
+                    <div id="1" class="footer__title_top">
+                        <h4>Trabaja con nosotros</h4>
+                        <img class="footer__icon" id="img1" src="assets/images/icons/plus.png" alt="">
+                    </div>
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="#">Trabajadores</a></li>
+                            <li><a href="#">Asociados</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__sections">
+                    <div id="2" class="footer__title_top">
+                        <h4>Otras secciones</h4>
+                        <img class="footer__icon" id="img2" src="assets/images/icons/plus.png" alt="">
+                    </div>
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="#">Sección 1</a></li>
+                            <li><a href="#">Sección 2</a></li>
+                            <li><a href="#">Seccióon 3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__legal">
+                    <div id="3" class="footer__title_top">
+                        <h4>Legal</h4>
+                        <img class="footer__icon" id="img3" src="assets/images/icons/plus.png" alt="">
+                    </div>
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">Política de cookies</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__follow">
+                    <div class="footer__icons">
+                        <img src="assets/images/icons/rs_1.png" alt="">
+                        <img src="assets/images/icons/rs_2.png" alt="">
+                        <img src="assets/images/icons/rs_3.png" alt="">
+                        <img src="assets/images/icons/rs_4.png" alt="">
+                    </div>
+                </div>
+                <span class="footer__copyright">© 2021 Pintemax- Todos los derechos reservados</span>
+        </div>
     </footer>
     
+    <script src="assets/js/main.js"></script>
     <script src="assets/libs/swiper-bundle.min.js"></script>
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="assets/libs/slick-carousel.js"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/libs/materialize/materialize.min.js"></script>
+    <script src="assets/libs/slick.js"></script>
     <script>
         $(document).ready(function () {
             $('.carousel').carousel({

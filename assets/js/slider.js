@@ -11,12 +11,15 @@ var swiper = new Swiper(".slide-content", {
 
     breakpoints: {
         0: {
-            slidesPerView: 1,
+            slidesPerView: 'auto',
         },
-        520: {
+        401: {
             slidesPerView: 2,
         },
-        950: {
+        941: {
+            slidesPerView: 3,
+        },
+        1200: {
             slidesPerView: 4,
         },
     },
@@ -35,28 +38,58 @@ var swiper = new Swiper(".slide-content_text", {
 
     breakpoints: {
         0: {
-            slidesPerView: 1,
-        },
-        520: {
             slidesPerView: 2,
         },
-        950: {
+        520: {
+            slidesPerView: 3,
+        },
+        1200: {
             slidesPerView: 4,
         },
     },
 });
 
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: ".hero__btn_slider_next",
+        prevEl: ".hero__btn_slider_prev",
+    },
+});
+
+
 $('.slider-for').slick({
     slidesToShow: 2,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     fade: true,
     asNavFor: '.slider-nav'
-  });
-  $('.slider-nav').slick({
+});
+$('.slider-nav').slick({
     slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: true,
-    focusOnSelect: true
-  });
+    focusOnSelect: true,
+    arrows: true,
+    responsive: [
+        {
+            breakpoint: 1101,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+    ],
+});
+
+function moveSlide(inc) {
+    if (inc > 0) {
+        $('.slider-nav').slick('slickNext');
+    } else {
+        $('.slider-nav').slick('slickPrev');
+    }
+}
