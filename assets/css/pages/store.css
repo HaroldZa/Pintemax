@@ -3,26 +3,6 @@
     height: 80rem;
 }
 
-.hero h1 {
-    text-align: center;
-    color: var(--white);
-    padding-top: 5rem;
-    font-family: BuloRounded-Black;
-    font-size: 7rem;
-}
-
-.hero__border {
-    background-image: url(../../images/f_12.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    position: absolute;
-    bottom: 0;
-    z-index: 0;
-    width: 100%;
-    height: 50rem;
-}
-
 /* Main */
 .main {
     margin-top: -28rem;
@@ -167,63 +147,168 @@ input[type="checkbox"]{
 .main__products_footer nav{
     margin: 0 auto;
 }
-
-/* Footer */
-.footer{
-    margin-top: 2rem;
-    background-image: url(../../images/f_11.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    position: relative;
-    height: 80rem;
+.filter{
+    display: block;
+}
+.filter_mob{
+    display: none;
+}
+.footer__border{
+    z-index: 0;
+}
+@media (max-width: 990px) {
+    /* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #004481; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
-  .footer__border{
+
+
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav li,
+  .sidenav p{
+    color: var(--white);
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
     position: absolute;
     top: 0;
-    background-image: url(../../images/f_10.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 45rem;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
   }
-  .footer__content{
-    padding-top: 50rem;
-    display: flex;
-    color: var(--white);
-    justify-content: space-between;
-    font-weight: 300;
-    font-size: 1.8rem;
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
   }
-  .footer__content h4{
-    font-size: 2rem;
-    font-weight: 500;
+    .filter{
+        display: none;
+    }
+    .filter_mob{
+        display: block;
+    }
+    .main{
+        position: relative;
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+    .filter_content{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        position: absolute;
+        right: 7%;
+        top: -2rem;
+        
+    }
+    .text_filter{
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+    .filter_space{
+        position: absolute;
+        height: 1.2rem;
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border-bottom: 1px solid rgba(96, 96, 96, .4);
+    }
+    .menu_drop{
+        background-color: transparent;
+        padding: 0 3rem;
+        color: var(--white);
+        
+    }
+    .main__categories p{
+        font-size: 1.4rem;
+    }
+    .main__categories ul{
+        font-size: 1.8rem;
+    }
+    .main__search img{
+        left: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero__logo_mobile{
+      margin-top: 2rem;
+    }
+    .pagination_mobile{
+      display: block;
+    }
+    .hero{
+      height: 40rem;
+    }
+    .main{
+      position: relative;
+      z-index: 1;
+      margin-top: -4rem;
+      background-color: var(--white);
+    }
+    .main__product > img{
+        max-width: 22rem;
+    }
+    .main__product_price{
+        width: 100%;
+    }
+    .main__product_text h4{
+        font-size: 2.5rem;
+    }
+    .main__product_text p{
+        font-size: 1.5rem;
+    }
+    .products__card_price > span{
+        font-size: 2rem;
+    }
   }
-  .footer__work a,
-  .footer__legal ul li a{
-    color: var(--white);
-  }
-  .footer__legal ul li{
-    line-height: 1.8;
-  }
-  .footer__work span{
-    display: block;
-    margin-top: 2rem;
-  }
-  .footer__legal ul{
-    list-style: none;
-    padding: 0;
-  }
-  .footer__icons img{
-    margin-top: 2rem;
-    max-width: 5%;
-  }
-  .footer__copyright{
-    position: absolute;
-    bottom: 2rem;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: var(--white);
-    font-weight: 300;
-    font-size: 1.5rem;
+
+  @media (max-width: 600px) {
+    .main{
+        margin-top: -10%;
+    }
+    .main__product{
+        display: grid;
+        justify-items: center;
+    }
+    .main__products_footer{
+        display: grid;
+    }
+    .main__products_footer > p{
+        position: static;
+        width: 100%;
+        margin: 0;
+    }
+  } 
+  @media (max-width: 500px) {
+    .main{
+        margin-top: -25%;
+    }
   }

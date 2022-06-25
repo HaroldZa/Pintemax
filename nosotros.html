@@ -13,7 +13,7 @@
 </head>
 <body>
     <header class="hero">
-        <nav class="hero__nav container">
+        <nav class="hero__nav container desktop">
             <a href="index.html"><img id="hero__logo" src="assets/images/l_1.png" alt="Pintemax"></a>
             <div id="hero__nav_menu">
                 <a href="servicios.html">Servicios</a>
@@ -32,6 +32,64 @@
                 </div>
             </div>
         </nav>
+        <!-- End Menu -->
+        
+        <!-- Menu mobile -->
+        <div class="menu mobile">
+            <h4 style="text-align: center; margin-bottom: 2rem;">Menu</h4>
+            <p><a href="index.php">Inicio</a></p>
+            <p class="submenu">Programación</p>
+            <div class="menu__submenu">
+                <li><a href="desarrollo-de-plataformas.php">Plataformas</a></li>
+                <li><a href="desarrollo-de-blockchain.php">Blockchain</a></li>
+                <li><a href="desarrollo-de-apps.php">APP's</a></li>
+                <li><a href="desarrollo-de-paginas-web.php">Páginas web</a></li>
+            </div>
+            <p class="submenu">Marketing</p>
+            <div class="menu__submenu">
+                <li><a href="posicionamiento-seo-en-las-palmas.php">Posicionamiento SEO</a></li>
+                <li><a href="comunnity-manager.php">Community Manager</a></li>
+                <li><a href="email-marketing.php">Email Marketing</a></li>
+                <li><a href="posicionamiento-sem-en-las-palmas.php">Posicionamiento SEM</a></li>
+            </div>
+            <p class="submenu">Diseño Gráfico</p>
+            <div class="menu__submenu">
+                <li><a href="diseno-grafico-ui-uix.php">Diseño de plataformas</a></li>
+                <li><a href="video-maker.php">Video Maker</a></li>
+            </div>
+            <p><a href="subvenciones.php">Subvenciones</a></p>
+            <div class="footer__menu_mobile">
+                <img class="menu_logo" src="assets/images/logo_b.png" alt="">
+                <div class="footer__icons">
+                    <ul class="icons">
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/icon2.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/icon3.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/icon4.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="menu__toggler mobile"><span></span></div>
+        <div class="hero__nav_mobile mobile">
+            <a id="hero__logo_mobile" class="mobile" href="index.html">
+                <img src="assets/images/logo_mob.png" alt="Pintemax">
+            </a>
+            <div id="hero__options_icons">
+                <img src="assets/images/icons/ic_1.png" alt="">
+                <img src="assets/images/icons/ic_2.png" alt="">
+                <img src="assets/images/icons/ic_3.png" alt="">
+            </div>
+        </div>
+        <!-- End Menu Mobile -->
         <h1>Nosotros</h1>
         <div class="hero__border"></div>
     </header>
@@ -56,20 +114,20 @@
     </main>
 
     <section class="experience container">
-        <div class="experience__cards row">
-            <div class="experience__card col-md-3">
+        <div class="experience__cards">
+            <div class="experience__card">
                 <img class="experience__card_img" src="assets/images/i_2.png" alt="">
                 <p class="experience__card_paragraph">Experiencia</p>
             </div>
-            <div class="experience__card col-md-3">
+            <div class="experience__card">
                 <img class="experience__card_img" src="assets/images/i_3.png" alt="">
                 <p class="experience__card_paragraph">Asesoramiento</p>
             </div>
-            <div class="experience__card col-md-3">
+            <div class="experience__card">
                 <img class="experience__card_img" src="assets/images/i_4.png" alt="">
                 <p class="experience__card_paragraph">Preparación de pinturas</p>
             </div>
-            <div class="experience__card col-md-3">
+            <div class="experience__card">
                 <img class="experience__card_img" src="assets/images/i_5.png" alt="">
                 <p class="experience__card_paragraph">Pintura Profesional</p>
             </div>
@@ -141,12 +199,13 @@
     </section>
 
     <section class="contact">
+        <img class="hero__icon mobile" src="assets/images/icons/w_1.png" alt="">
         <div class="contact__content container">
             <h2>¡Novedades y promociones <span>en un paso!</span></h2>
             <div class="contact__form">
                 <input type="text" placeholder="Nombre">
                 <input type="email" placeholder="E-mail">
-                <a href="#">¡Quiero ser el primero!</a>
+                <div><a href="#">¡Quiero ser el primero!</a></div>
             </div>
             <div class="contact__terms">
                 <input type="checkbox">
@@ -181,7 +240,7 @@
 
     <footer class="footer">
         <div class="footer__border"></div>
-        <div class="footer__content container">
+        <div class="footer__content footer__desktop container">
             <div class="footer__work">
                 <h4>Trabaja con nosotros</h4>
                 <span>¿Te unes al equipo?</span>
@@ -206,7 +265,60 @@
             </div>
             <span class="footer__copyright">© 2021 Pintemax- Todos los derechos reservados</span>
         </div>
+
+        <div class="footer__content footer__mobile container">
+                <div class="footer__work">
+                    <div id="1" class="footer__title_top">
+                        <h4>Trabaja con nosotros</h4>
+                        <img class="footer__icon" id="img1" src="assets/images/icons/plus.png" alt="">
+                    </div>
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="#">Trabajadores</a></li>
+                            <li><a href="#">Asociados</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__sections">
+                    <div id="2" class="footer__title_top">
+                        <h4>Otras secciones</h4>
+                        <img class="footer__icon" id="img2" src="assets/images/icons/plus.png" alt="">
+                    </div>
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="#">Sección 1</a></li>
+                            <li><a href="#">Sección 2</a></li>
+                            <li><a href="#">Seccióon 3</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__legal">
+                    <div id="3" class="footer__title_top">
+                        <h4>Legal</h4>
+                        <img class="footer__icon" id="img3" src="assets/images/icons/plus.png" alt="">
+                    </div>
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="#">Términos y condiciones</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">Política de cookies</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__follow">
+                    <div class="footer__icons">
+                        <img src="assets/images/icons/rs_1.png" alt="">
+                        <img src="assets/images/icons/rs_2.png" alt="">
+                        <img src="assets/images/icons/rs_3.png" alt="">
+                        <img src="assets/images/icons/rs_4.png" alt="">
+                    </div>
+                </div>
+                <span class="footer__copyright">© 2021 Pintemax- Todos los derechos reservados</span>
+        </div>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 
     <script src="assets/libs/swiper-bundle.min.js"></script>
     <script>
@@ -216,6 +328,14 @@
           el: ".swiper-pagination",
           clickable: true,
         },
+        breakpoints: {
+        350: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+    },
       });
       console.log(swiper.slidesGrid)
     </script>

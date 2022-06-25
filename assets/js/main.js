@@ -44,3 +44,20 @@ for (i = 0; i < title.length; i++) {
     }
     });
   });
+
+  /* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "280px";
+  document.getElementById("menu_filter").style.width = "280px";
+  document.getElementById("menu_tog").style.zIndex = "1";
+  document.getElementById("menu_tog").style.opacity = "0";
+  document.getElementById("menu_tog").style.transition = "0s";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("menu_tog").style.zIndex = "999";
+  document.getElementById("menu_tog").style.opacity = "1";
+  document.getElementById("menu_tog").style.transition = "2s";
+}
