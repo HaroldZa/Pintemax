@@ -49,7 +49,7 @@ for (i = 0; i < title.length; i++) {
 function openNav() {
   document.getElementById("mySidenav").style.width = "280px";
   document.getElementById("menu_filter").style.width = "280px";
-  document.getElementById("menu_tog").style.zIndex = "1";
+  document.getElementById("menu_tog").style.zIndex = "0";
   document.getElementById("menu_tog").style.opacity = "0";
   document.getElementById("menu_tog").style.transition = "0s";
 }
@@ -61,3 +61,5 @@ function closeNav() {
   document.getElementById("menu_tog").style.opacity = "1";
   document.getElementById("menu_tog").style.transition = "2s";
 }
+
+new WOW().init();

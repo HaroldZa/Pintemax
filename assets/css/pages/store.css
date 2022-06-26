@@ -108,12 +108,24 @@ input[type="checkbox"]{
     align-items: center;
     width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .pagination>a{
     font-size: 2.2rem;
     margin: 0 1rem;
     font-weight: 300;
     color: #000;
+}
+.pagination li{
+    margin: 0 .7rem;
+}
+.page-link{
+    font-weight: 300;
+    color: #575756;
+    font-size: 2.5rem;
+}
+.pagination>.active > a{
+    padding: 0 .5rem;
 }
 .prev,
 .next{
@@ -156,6 +168,7 @@ input[type="checkbox"]{
 .footer__border{
     z-index: 0;
 }
+
 @media (max-width: 990px) {
     /* The side navigation menu */
 .sidenav {

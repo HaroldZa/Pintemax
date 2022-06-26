@@ -58,13 +58,13 @@ summary {
 }
 
 details {
-    min-height: 6rem;
+    height: 6rem;
     transition: height .8s ease-in;
 }
 
 details[open] {
-    min-height: 25rem;
-    transition: min-height .4s ease-in;
+    height: 25rem;
+    transition: height .8s ease-in;
 }
 
 .main__multi_title {
@@ -123,6 +123,12 @@ summary::-webkit-details-marker {
       }
     .main{
         margin-top: 0;
+    }
+    details[open] {
+        height: 65rem;
+    }
+    details:nth-child(3)[open] {
+        height: 1rem;
     }
 }
 

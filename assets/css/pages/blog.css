@@ -311,4 +311,7 @@ img{
     .card{
         margin-top: -12rem;
     }
+    .main__search img{
+        left: 6%;
+    }
 }

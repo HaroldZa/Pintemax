@@ -7,6 +7,8 @@
   margin-top: 12rem;
   position: relative;
   z-index: 1 !important;
+  animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 /* Cards Slider */
@@ -41,12 +43,116 @@
   padding-bottom: 3rem;
 }
 
-.hero__card_btn {
-  background-color: var(--secondary);
-  padding: 1.3rem 4rem;
-  border-radius: 3rem;
+.button {
+  display: inline-block;
+  text-align: center;
+  background: var(--secondary);
   color: var(--white);
+  font-weight: 500;
+  padding: 1.3rem 4rem;
+  line-height: 1;
+  border-radius: 3rem;
+  position: relative;
+  min-width: 8.23em;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: .7s;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
+
+.button:before,
+.button:after {
+  width: 4.4em;
+  height: 2.95em;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background: var(--secondary);
+  border-radius: 50%;
+  transition: transform 1s ease;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.button:before {
+  top: -25%;
+  left: 20%;
+}
+
+.button:after {
+  bottom: -25%;
+  right: 20%;
+}
+
+.button:hover:before,
+.button:hover:after {
+  transform: none;
+}
+.button:hover{
+  transform: scale(1.1) translateZ(0);
+backface-visibility: hidden;
+  transition: .7s;
+  color: var(--white);
+  
+}
+
+a.animated-button:link, a.animated-button:visited {
+  position: relative;
+  display: block;
+  margin: 30px auto 0;
+  padding: 14px 15px;
+  color: #fff;
+  font-size:14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  border-radius: 0;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+  content: "";
+  position: absolute;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  z-index: -1;
+  -webkit-transition: all 0.75s ease 0s;
+  -moz-transition: all 0.75s ease 0s;
+  -o-transition: all 0.75s ease 0s;
+  transition: all 0.75s ease 0s;
+  background-color: var(--secondary);
+}
+
+a.animated-button.sandy-three {
+  border: 2px solid #AEA8D3;
+  color: #FFF;
+}
+a.animated-button.sandy-three:after {
+  border: 3px solid #AEA8D3;
+  opacity: 0;
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+  transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+}
+a.animated-button.sandy-three:hover:after {
+  height: 400% !important;
+  opacity: 1;
+  color: #FFF;
+}
+
+
+
 
 .hero__card_img {
   margin-left: -7rem;
@@ -60,7 +166,7 @@
 
 .hero__card_title,
 .hero__card_paragraph,
-.hero__card_btn,
+.button,
 .hero__card_btn,
 .hero__card_img {
   opacity: 0;
@@ -89,7 +195,7 @@
 .active,
 .active .hero__card_title,
 .active .hero__card_paragraph,
-.active .hero__card_btn,
+.active .button,
 .active .hero__card_btn,
 .active .hero__card_img {
   opacity: 1 !important;
@@ -902,7 +1008,7 @@
   .hero__card_title,
   .hero__card_paragraph,
   .hero__card_btn,
-  .hero__card_btn,
+  .button,
   .hero__card_img {
     opacity: 1;
   }
@@ -913,8 +1019,6 @@
     -moz-box-shadow: none;
     opacity: 1 !important;
   }
-
-
   /* Slider */
   #slider .swiper {
     width: 100%;
@@ -926,6 +1030,7 @@
     box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.30);
     -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.30);
     -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.30);
+    
   }
 
   #slider .swiper-slide {
