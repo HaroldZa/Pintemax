@@ -452,6 +452,16 @@ h4 {
 }
 
 @media (max-width: 940px) {
+    .footer{
+        height: auto;
+    }
+    .icon_social{
+        position: absolute;
+        top: 23%;
+        right: 4%;
+        z-index: 3;
+        width: 12rem;
+    }
     .footer__content{
         padding-top: 0;
     }
@@ -564,7 +574,6 @@ h4 {
     .footer {
         background-image: url(../images/footer_mobile.png);
     }
-
     .footer__border {
         width: 200%;
         left: -10%;
