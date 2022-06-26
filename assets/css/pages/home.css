@@ -538,7 +538,12 @@ a.animated-button.sandy-three:hover:after {
   font-weight: 300;
   padding-left: 3rem;
 }
-
+.swiper-button-next_text:active,
+.hero__btn_slider_next:active,
+.hero__btn_slider_prev:active,
+.swiper-button-prev_text:active{
+  transform: scale(1.02);
+}
 .slick-dots,
 .slick-next,
 .slick-prev {
@@ -966,6 +971,10 @@ a.animated-button.sandy-three:hover:after {
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+.contact__form>div:hover{
+  cursor: pointer;
 }
 
 .contact__form a {

@@ -138,7 +138,8 @@ h4 {
 #hero__options_catalog:hover,
 #hero__options_icons > img{
     cursor: pointer;
-    transform: scale(1.01);
+    transform: scale(1.02) translateZ(0);
+    backface-visibility: hidden;
     transition: .7s;
 }
 
