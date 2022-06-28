@@ -13,7 +13,18 @@
 .main__categories{
     position: relative;
     background-color: var(--white);
-    height: 100%;   
+    height: 100%; 
+}
+label{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
+label:hover {
+    cursor:pointer;
 }
 .main__border{
     position: absolute;
@@ -68,6 +79,9 @@ input[type="checkbox"]{
 .main__product,
 .main__product_price{
     display: flex;
+}
+.main__product:hover{
+    cursor: pointer;
 }
 .main__product{
     align-items: center;
@@ -124,12 +138,21 @@ input[type="checkbox"]{
     color: #575756;
     font-size: 2.5rem;
 }
+.page-link:hover{
+    color: #7e7e7e;
+}
 .pagination>.active > a{
     padding: 0 .5rem;
 }
 .prev,
 .next{
     margin: 0 !important;
+    transition: .4s;
+}
+.next:hover,
+.prev:hover{
+    transform: scale(1.1);
+    transition: .4s;
 }
 .products__card_price {
     position: relative;

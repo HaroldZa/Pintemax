@@ -14,8 +14,8 @@
 </head>
 <body>
     <header class="hero">
-        <!-- Menu -->
-        <nav class="hero__nav container desktop">
+         <!-- Menu -->
+         <nav class="hero__nav container desktop">
             <a href="index.html"><img id="hero__logo" src="assets/images/l_1.png" alt="Pintemax"></a>
             <div id="hero__nav_menu">
                 <a href="servicios.html">Servicios</a>
@@ -28,12 +28,91 @@
             <div class="hero__options">
                 <div id="hero__options_catalog">Catalogo virtual</div>
                 <div id="hero__options_icons">
-                    <img src="assets/images/icons/ic_1.png" alt="">
-                    <img src="assets/images/icons/ic_2.png" alt="">
-                    <img src="assets/images/icons/ic_3.png" alt="">
+                    <nav>
+                        <ul class="primary">
+                            <li onclick="openSearch()"><img src="assets/images/icons/ic_1.png" alt="">
+                            </li>
+                            <li onclick="openCart()"><img src="assets/images/icons/ic_2.png" alt=""><sup
+                                    class="badge">2</sup>
+                            </li>
+                            <li class="sub_primary">
+                                <img src="assets/images/icons/ic_3.png" alt="">
+                                <ul class="sub">
+                                    <li>
+                                        <div class="button-container-3">
+                                            <span class="mas">Iniciar Sesión</span>
+                                            <button type="button" name="Hover">Iniciar Sesión</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="button-container-3">
+                                            <span class="mas">Registrarse</span>
+                                            <button type="button" name="Hover">Registrarse</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </nav>
+
+        <!-- Shop Car -->
+        <div id="shopping_cart" class="sidenav filter_mob">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
+            <div class="car">
+                <h4>Carrito de compras</h4>
+
+                <div class="car__products">
+                    <div class="card__product">
+                        <img src="assets/images/p_1.png" alt="">
+                        <div class="card__product_info">
+                            <div class="card__product_title">
+                                <span>Lorem upsum</span>
+                                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                            </div>
+                            <div class="card__product_price">
+                                <span>$33.00</span>
+                                <input type="number" placeholder="0">
+                            </div>
+                        </div>
+                        <span><a class="car_close" href="">X</a></span>
+                    </div>
+                    <div class="card__product">
+                        <img src="assets/images/p_1.png" alt="">
+                        <div class="card__product_info">
+                            <div class="card__product_title">
+                                <span>Lorem upsum</span>
+                                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                            </div>
+                            <div class="card__product_price">
+                                <span>$33.00</span>
+                                <input type="number" placeholder="0">
+                            </div>
+                        </div>
+                        <span><a class="car_close" href="">X</a></span>
+                    </div>
+                </div>
+
+                <div class="car_total">
+                    <p>Total: <span>$66.00</span></p>
+                    <a class="check" href="#">Proceder a pagar</a>
+                </div>
+            </div>
+        </div>
+        <!-- End Shop Car -->
+
+        <!-- Search -->
+        <div id="search_nav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSearch()">&times;</a>
+            <div class="search_nav_content">
+                <input type="text" placeholder="Buscar...">
+                <button type="button"></button>
+            </div>
+        </div>
+        <!-- End Search -->
+
         <!-- End Menu -->
 
         <!-- Menu mobile -->
@@ -72,9 +151,32 @@
                 <img src="assets/images/logo_mob.png" alt="Pintemax">
             </a>
             <div id="hero__options_icons">
-                <img src="assets/images/icons/ic_1.png" alt="">
-                <img src="assets/images/icons/ic_2.png" alt="">
-                <img src="assets/images/icons/ic_3.png" alt="">
+                <nav>
+                    <ul class="primary">
+                        <li onclick="openSearch()"><img src="assets/images/icons/ic_1.png" alt="">
+                        </li>
+                        <li onclick="openCart()"><img src="assets/images/icons/ic_2.png" alt=""><sup
+                                class="badge">2</sup>
+                        </li>
+                        <li class="sub_primary">
+                            <img src="assets/images/icons/ic_3.png" alt="">
+                            <ul class="sub">
+                                <li>
+                                    <div class="button-container-3">
+                                        <span class="mas">Iniciar Sesión</span>
+                                        <button type="button" name="Hover">Iniciar Sesión</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="button-container-3">
+                                        <span class="mas">Registrarse</span>
+                                        <button type="button" name="Hover">Registrarse</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <!-- End Menu Mobile -->
@@ -191,7 +293,10 @@
             </div>
             <div class="contact__btn 
             wow animate__animated animate__fadeInRight zoom">
-                <a href="#">¡Contáctame!</a>
+                <div class="button-container-contact">
+                    <span class="mas_contact">¡Contáctame!</span>
+                    <button type="button" name="">¡Contáctame!</button>
+                </div>
             </div>
         </div>
         <div class="contact__img">
@@ -204,7 +309,7 @@
         <div class="footer__content footer__desktop container">
             <div class="footer__work wow animate__animated animate__fadeInLeft" >
                 <h4>Trabaja con nosotros</h4>
-                <span>¿Te unes al equipo?</span>
+                <a href="te-unes-a-nuestro-equipo.html">¿Te unes al equipo?</a>
                 <a href="contacto.html">Contácto</a>
             </div>
             <div class="footer__legal wow animate__animated animate__fadeInLeft">

@@ -45,7 +45,6 @@ for (i = 0; i < title.length; i++) {
     });
   });
 
-  /* Set the width of the side navigation to 250px */
 function openNav() {
   document.getElementById("mySidenav").style.width = "280px";
   document.getElementById("menu_filter").style.width = "280px";
@@ -54,12 +53,27 @@ function openNav() {
   document.getElementById("menu_tog").style.transition = "0s";
 }
 
-/* Set the width of the side navigation to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("menu_tog").style.zIndex = "999";
   document.getElementById("menu_tog").style.opacity = "1";
   document.getElementById("menu_tog").style.transition = "2s";
+}
+
+function openCart() {
+  document.getElementById("shopping_cart").style.width = "400px";
+}
+
+function closeCart() {
+  document.getElementById("shopping_cart").style.width = "0";
+}
+
+function openSearch() {
+  document.getElementById("search_nav").style.width = "100%";
+}
+
+function closeSearch() {
+  document.getElementById("search_nav").style.width = "0";
 }
 
 new WOW().init();

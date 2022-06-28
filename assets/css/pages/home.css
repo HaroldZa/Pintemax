@@ -43,117 +43,6 @@
   padding-bottom: 3rem;
 }
 
-.button {
-  display: inline-block;
-  text-align: center;
-  background: var(--secondary);
-  color: var(--white);
-  font-weight: 500;
-  padding: 1.3rem 4rem;
-  line-height: 1;
-  border-radius: 3rem;
-  position: relative;
-  min-width: 8.23em;
-  text-decoration: none;
-  font-size: 1.8rem;
-  transition: .7s;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-font-smoothing: subpixel-antialiased;
-}
-
-.button:before,
-.button:after {
-  width: 4.4em;
-  height: 2.95em;
-  position: absolute;
-  content: "";
-  display: inline-block;
-  background: var(--secondary);
-  border-radius: 50%;
-  transition: transform 1s ease;
-  transform: scale(0);
-  z-index: -1;
-}
-
-.button:before {
-  top: -25%;
-  left: 20%;
-}
-
-.button:after {
-  bottom: -25%;
-  right: 20%;
-}
-
-.button:hover:before,
-.button:hover:after {
-  transform: none;
-}
-.button:hover{
-  transform: scale(1.1) translateZ(0);
-backface-visibility: hidden;
-  transition: .7s;
-  color: var(--white);
-  
-}
-
-a.animated-button:link, a.animated-button:visited {
-  position: relative;
-  display: block;
-  margin: 30px auto 0;
-  padding: 14px 15px;
-  color: #fff;
-  font-size:14px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  letter-spacing: .08em;
-  border-radius: 0;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-}
-a.animated-button:link:after, a.animated-button:visited:after {
-  content: "";
-  position: absolute;
-  height: 0%;
-  left: 50%;
-  top: 50%;
-  width: 150%;
-  z-index: -1;
-  -webkit-transition: all 0.75s ease 0s;
-  -moz-transition: all 0.75s ease 0s;
-  -o-transition: all 0.75s ease 0s;
-  transition: all 0.75s ease 0s;
-  background-color: var(--secondary);
-}
-
-a.animated-button.sandy-three {
-  border: 2px solid #AEA8D3;
-  color: #FFF;
-}
-a.animated-button.sandy-three:after {
-  border: 3px solid #AEA8D3;
-  opacity: 0;
-  -moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
-  -ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
-  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
-  transform: translateX(-50%) translateY(-50%) rotate(-25deg);
-}
-a.animated-button.sandy-three:hover:after {
-  height: 400% !important;
-  opacity: 1;
-  color: #FFF;
-}
-
-
-
-
 .hero__card_img {
   margin-left: -7rem;
   padding-right: 2rem;
@@ -166,7 +55,7 @@ a.animated-button.sandy-three:hover:after {
 
 .hero__card_title,
 .hero__card_paragraph,
-.button,
+.button-container-2,
 .hero__card_btn,
 .hero__card_img {
   opacity: 0;
@@ -195,7 +84,7 @@ a.animated-button.sandy-three:hover:after {
 .active,
 .active .hero__card_title,
 .active .hero__card_paragraph,
-.active .button,
+.active .button-container-2,
 .active .hero__card_btn,
 .active .hero__card_img {
   opacity: 1 !important;
@@ -216,12 +105,16 @@ a.animated-button.sandy-three:hover:after {
 
 .hero__icon {
   width: 11.8rem;
-  position: absolute;
-  right: 2%;
-  bottom: -5rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
   z-index: 3;
+  transition: .7s;
 }
-
+.hero__icon:hover{
+  transition: .7s;
+  cursor: pointer;
+}
 /* Main */
 .main {
   position: relative;
@@ -367,8 +260,12 @@ a.animated-button.sandy-three:hover:after {
   top: 53%;
   left: 43.5%;
   transform: translate(-50%, -50%);
+  transition: .2s;
 }
-
+.btn_free:hover{
+  transform: scale(1.01);
+  transition: .2s;
+}
 /* Slider Cards */
 .slider_cards {
   width: min(90%, 125rem);
@@ -451,8 +348,20 @@ a.animated-button.sandy-three:hover:after {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 5.2rem;
-  height: 5.5rem;
-  margin-top: 7% !important;
+  height: 5.2rem;
+  margin-top: 2% !important;
+  transition: .7s;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover,
+.swiper-button-next_text:hover,
+.swiper-button-prev_text:hover{
+  transform: scale(1.05);
+  transition: .7s; 
+}
+
+.swiper-button-next_text:active{
+  
 }
 
 .swiper-button-prev {
@@ -813,6 +722,7 @@ a.animated-button.sandy-three:hover:after {
   background-size: 100% 100%;
   width: 5.8rem;
   height: 5.3rem;
+  transition: .7s;
 }
 
 .swiper-button-next_text {
@@ -831,7 +741,9 @@ a.animated-button.sandy-three:hover:after {
   text-align: center;
   gap: 7rem;
 }
-
+.products__card:hover{
+  cursor: pointer;
+}
 .products__card {
   padding: 3rem 0 1rem 0;
   border-radius: 1rem;
@@ -888,6 +800,10 @@ a.animated-button.sandy-three:hover:after {
 .social__card {
   position: relative;
   display: inline-block;
+}
+
+.social__card > img:nth-child(2):hover{
+  filter: brightness(1.05);
 }
 
 .social__card img {
@@ -967,7 +883,7 @@ a.animated-button.sandy-three:hover:after {
 
 .contact__form>div {
   grid-column: 8/10;
-  background-color: #004481;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -995,6 +911,7 @@ a.animated-button.sandy-three:hover:after {
   margin-left: 1rem;
 }
 
+
 .icon_mobile {
   display: none;
 }
@@ -1010,6 +927,57 @@ a.animated-button.sandy-three:hover:after {
 .img_mobile {
   display: none;
 }
+.mas_home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #30577a;
+  color: #fff;
+  text-align: center;
+  width: 15rem;
+  height: 4.5rem;
+  font-size: 1.8rem;
+  margin-top: 0rem;
+  border-radius: 3rem;
+  overflow: hidden;
+  border: none;
+  font-weight: bold;
+}
+.button-container-2:hover .mas_home{
+  border: 1px solid rgb(229, 229, 229);
+}
+.button-container-2 {
+  position: relative;  
+  font-size: 1.8rem;
+  width: 15rem;
+  height: 4.5rem;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 3rem;
+}
+.button-container-2 button {
+  width: 101%;
+  height: 100%;
+  font-weight: 300;
+  font-weight: bold;
+  background: var(--secondary);
+  border-radius: 3rem;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
+  
+}
+.button-container-2 button:hover {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
+}
 
 @media (max-width: 1220px) {
 
@@ -1017,7 +985,7 @@ a.animated-button.sandy-three:hover:after {
   .hero__card_title,
   .hero__card_paragraph,
   .hero__card_btn,
-  .button,
+  .button-container-2,
   .hero__card_img {
     opacity: 1;
   }
@@ -1068,8 +1036,9 @@ a.animated-button.sandy-three:hover:after {
   .hero__btn_slider_prev {
     margin-left: 1rem;
     width: 3.8rem;
-    height: 3.8rem;
+    height: 3.3rem;
     z-index: 2;
+    padding-bottom: 4rem;
   }
 
   .swiper__btn {
@@ -1085,7 +1054,7 @@ a.animated-button.sandy-three:hover:after {
   }
 
   .main {
-    margin-top: 0;
+    margin-top: -3rem;
   }
 
   .contact__form a {
@@ -1102,11 +1071,16 @@ a.animated-button.sandy-three:hover:after {
     display: none;
   }
 
+  .rev_next:active,
+  .rev_prev:active{
+    transform: scale(1.1);
+  }
   .contact {
     position: relative;
   }
 
   .hero__icon {
+    position: absolute;
     width: 15%;
     top: -7rem;
   }
@@ -1464,11 +1438,10 @@ a.animated-button.sandy-three:hover:after {
   }
 
   .main__cards {
-    margin-left: 1.5rem !important;
+    width: 100%;
   }
 
   .main__card_img {
-    margin-left: 1rem;
     max-width: 100%;
   }
 
@@ -1612,7 +1585,7 @@ a.animated-button.sandy-three:hover:after {
   .hero__btn_slider_next,
   .hero__btn_slider_prev {
     width: 3.8rem;
-    height: 3.8rem;
+    height: 3.3rem;
   }
 
   /* Slider Cards */
@@ -1641,13 +1614,13 @@ a.animated-button.sandy-three:hover:after {
   }
 
   #cut_img__btn img {
-    width: 100%;
+    width: 110%;
   }
 
   #cut_img__btn span {
     width: 100%;
-    font-size: 1.5rem;
-    left: 55%;
+    font-size: 1.2rem;
+    left: 78%;
   }
 
   /* Reviews border */
@@ -1662,5 +1635,8 @@ a.animated-button.sandy-three:hover:after {
 
   .reviews_border_content img {
     max-width: 100%;
+  }
+  .main {
+    margin-top: -5rem;
   }
 }

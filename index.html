@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="assets/libs/slick.css">
 </head>
 <style>
-    
+
 </style>
+
 <body>
     <header class="hero">
         <!-- Menu -->
@@ -33,12 +34,91 @@
             <div class="hero__options">
                 <div id="hero__options_catalog">Catalogo virtual</div>
                 <div id="hero__options_icons">
-                    <img src="assets/images/icons/ic_1.png" alt="">
-                    <img src="assets/images/icons/ic_2.png" alt="">
-                    <img src="assets/images/icons/ic_3.png" alt="">
+                    <nav>
+                        <ul class="primary">
+                            <li onclick="openSearch()"><img src="assets/images/icons/ic_1.png" alt="">
+                            </li>
+                            <li onclick="openCart()"><img src="assets/images/icons/ic_2.png" alt=""><sup
+                                    class="badge">2</sup>
+                            </li>
+                            <li class="sub_primary">
+                                <img src="assets/images/icons/ic_3.png" alt="">
+                                <ul class="sub">
+                                    <li>
+                                        <div class="button-container-3">
+                                            <span class="mas">Iniciar Sesión</span>
+                                            <button type="button" name="Hover">Iniciar Sesión</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="button-container-3">
+                                            <span class="mas">Registrarse</span>
+                                            <button type="button" name="Hover">Registrarse</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </nav>
+
+        <!-- Shop Car -->
+        <div id="shopping_cart" class="sidenav filter_mob">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
+            <div class="car">
+                <h4>Carrito de compras</h4>
+
+                <div class="car__products">
+                    <div class="card__product">
+                        <img src="assets/images/p_1.png" alt="">
+                        <div class="card__product_info">
+                            <div class="card__product_title">
+                                <span>Lorem upsum</span>
+                                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                            </div>
+                            <div class="card__product_price">
+                                <span>$33.00</span>
+                                <input type="number" placeholder="0">
+                            </div>
+                        </div>
+                        <span><a class="car_close" href="">X</a></span>
+                    </div>
+                    <div class="card__product">
+                        <img src="assets/images/p_1.png" alt="">
+                        <div class="card__product_info">
+                            <div class="card__product_title">
+                                <span>Lorem upsum</span>
+                                <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                            </div>
+                            <div class="card__product_price">
+                                <span>$33.00</span>
+                                <input type="number" placeholder="0">
+                            </div>
+                        </div>
+                        <span><a class="car_close" href="">X</a></span>
+                    </div>
+                </div>
+
+                <div class="car_total">
+                    <p>Total: <span>$66.00</span></p>
+                    <a class="check" href="#">Proceder a pagar</a>
+                </div>
+            </div>
+        </div>
+        <!-- End Shop Car -->
+
+        <!-- Search -->
+        <div id="search_nav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSearch()">&times;</a>
+            <div class="search_nav_content">
+                <input type="text" placeholder="Buscar...">
+                <button type="button"></button>
+            </div>
+        </div>
+        <!-- End Search -->
+
         <!-- End Menu -->
 
         <!-- Menu mobile -->
@@ -77,9 +157,32 @@
                 <img src="assets/images/logo_mob.png" alt="Pintemax">
             </a>
             <div id="hero__options_icons">
-                <img src="assets/images/icons/ic_1.png" alt="">
-                <img src="assets/images/icons/ic_2.png" alt="">
-                <img src="assets/images/icons/ic_3.png" alt="">
+                <nav>
+                    <ul class="primary">
+                        <li onclick="openSearch()"><img src="assets/images/icons/ic_1.png" alt="">
+                        </li>
+                        <li onclick="openCart()"><img src="assets/images/icons/ic_2.png" alt=""><sup
+                                class="badge">2</sup>
+                        </li>
+                        <li class="sub_primary">
+                            <img src="assets/images/icons/ic_3.png" alt="">
+                            <ul class="sub">
+                                <li>
+                                    <div class="button-container-3">
+                                        <span class="mas">Iniciar Sesión</span>
+                                        <button type="button" name="Hover">Iniciar Sesión</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="button-container-3">
+                                        <span class="mas">Registrarse</span>
+                                        <button type="button" name="Hover">Registrarse</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <!-- End Menu Mobile -->
@@ -92,15 +195,10 @@
                         <h2 class="hero__card_title">Lorem ipsum</h2>
                         <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna</p>
-                            <a class="button" href="#">ver más</a>
-                            <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                            <defs>
-                                <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
-                                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-                                    <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-                                </filter>
-                            </defs>
-                        </svg>
+                        <div class="button-container-2">
+                            <span class="mas_home">ver más</span>
+                            <button type="button" name="Hover">ver más</button>
+                        </div>
                     </div>
                     <div class="hero__card_img col-md-5 zoom">
                         <img src="assets/images/p_1.png" alt="">
@@ -111,15 +209,10 @@
                         <h2 class="hero__card_title">2orem ipsum</h2>
                         <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna</p>
-                            <a class="button" href="#">ver más</a>
-                            <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                            <defs>
-                                <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
-                                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-                                    <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-                                </filter>
-                            </defs>
-                        </svg>
+                            <div class="button-container-2">
+                                <span class="mas_home">ver más</span>
+                                <button type="button" name="Hover">ver más</button>
+                            </div>
                     </div>
                     <div class="hero__card_img col-md-5 zoom">
                         <img src="assets/images/p_1.png" alt="">
@@ -130,15 +223,10 @@
                         <h2 class="hero__card_title">3orem ipsum</h2>
                         <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna</p>
-                            <a class="button" href="#">ver más</a>
-                            <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                            <defs>
-                                <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
-                                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-                                    <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-                                </filter>
-                            </defs>
-                        </svg>
+                            <div class="button-container-2">
+                                <span class="mas_home">ver más</span>
+                                <button type="button" name="Hover">ver más</button>
+                            </div>
                     </div>
                     <div class="hero__card_img col-md-5 zoom">
                         <img src="assets/images/p_1.png" alt="">
@@ -156,15 +244,10 @@
                             <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                 do
                                 eiusmod tempor incididunt ut labore et dolore magna</p>
-                                <a class="button" href="#">ver más</a>
-                                <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                <defs>
-                                    <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
-                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-                                        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-                                    </filter>
-                                </defs>
-                            </svg>
+                                <div class="button-container-2">
+                                    <span class="mas_home">ver más</span>
+                                    <button type="button" name="Hover">ver más</button>
+                                </div>
                         </div>
                         <div class="hero__card_img col-xs-5">
                             <img src="assets/images/p_1.png" alt="">
@@ -176,15 +259,10 @@
                             <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                 do
                                 eiusmod tempor incididunt ut labore et dolore magna</p>
-                                <a class="button" href="#">ver más</a>
-                                <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                <defs>
-                                    <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
-                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-                                        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-                                    </filter>
-                                </defs>
-                            </svg>
+                                <div class="button-container-2">
+                                    <span class="mas_home">ver más</span>
+                                    <button type="button" name="Hover">ver más</button>
+                                </div>
                         </div>
                         <div class="hero__card_img col-xs-5">
                             <img src="assets/images/p_1.png" alt="">
@@ -196,15 +274,10 @@
                             <p class="hero__card_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                 do
                                 eiusmod tempor incididunt ut labore et dolore magna</p>
-                                <a class="button" href="#">ver más</a>
-                                <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                <defs>
-                                    <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
-                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-                                        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-                                    </filter>
-                                </defs>
-                            </svg>
+                                <div class="button-container-2">
+                                    <span class="mas_home">ver más</span>
+                                    <button type="button" name="Hover">ver más</button>
+                                </div>
                         </div>
                         <div class="hero__card_img col-xs-5">
                             <img src="assets/images/p_1.png" alt="">
@@ -274,15 +347,15 @@
     <section class="cut_img">
         <div class="cut_img__content container">
             <h3 id="cut_img__title"><span>Choose a color</span> palette that fits the size of your home</h3>
-            <div id="cut_img__btn">
+            <a href="#" id="cut_img__btn" class="btn_free">
                 <img src="assets/images/b_2.png" alt="">
                 <span>Free Consultations</span>
-            </div>
+            </a>
         </div>
     </section>
 
     <section class="slider_cards" id="slider_top">
-        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn "></div>
         <div class="slide-container swiper">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper">
@@ -423,7 +496,8 @@
     <section class="products container">
         <div class="products__text">
             <h2 class="wow animate__animated animate__fadeInLeft">Conoce nuestros productos</h2>
-            <span class="wow animate__animated animate__fadeInRight">Cuenta ahora con la mejor seguridad tanto en los mares como en los bosques, gracias a pintemax</span>
+            <span class="wow animate__animated animate__fadeInRight">Cuenta ahora con la mejor seguridad tanto en los
+                mares como en los bosques, gracias a pintemax</span>
         </div>
         <div class="products__store">
             <div class="products__category">
@@ -477,19 +551,19 @@
 
     <section class="social container">
         <div class="social__cards">
-            <div class="social__card wow animate__animated animate__fadeInLeft zoom">
+            <div class="social__card wow animate__animated animate__fadeInLeft">
                 <img src="assets/images/k_1.png" alt="">
                 <img src="assets/images/icons/k_2.png" alt="">
             </div>
-            <div class="social__card wow animate__animated animate__fadeInLeft zoom">
+            <div class="social__card wow animate__animated animate__fadeInLeft">
                 <img src="assets/images/k_1.png" alt="">
                 <img src="assets/images/icons/k_3.png" alt="">
             </div>
-            <div class="social__card wow animate__animated animate__fadeInRight zoom">
+            <div class="social__card wow animate__animated animate__fadeInRight">
                 <img src="assets/images/k_1.png" alt="">
                 <img src="assets/images/icons/k_4.png" alt="">
             </div>
-            <div class="social__card wow animate__animated animate__fadeInRight zoom">
+            <div class="social__card wow animate__animated animate__fadeInRight">
                 <img src="assets/images/f_7.png" alt="">
                 <span>Pinta Diseña Crea</span>
             </div>
@@ -503,11 +577,15 @@
             <div class="contact__form">
                 <input class="zoom wow animate__animated animate__fadeInLeft" type="text" placeholder="Nombre">
                 <input class="zoom wow animate__animated animate__fadeInRight" type="email" placeholder="E-mail">
-                <div class="zoom wow animate__animated animate__zoomIn"><a href="#">¡Quiero ser el primero!</a></div>
+                <div class="zoom wow animate__animated animate__zoomIn">
+                    <div class="button-container-contact">
+                        <span class="mas_contact">¡Quiero ser el primero!</span>
+                        <button type="button" name="">¡Quiero ser el primero!</button>
+                    </div>
+                </div>
             </div>
             <div class="contact__terms">
-                <input type="checkbox">
-                <span>Acepto los términos y condiciones.</span>
+                <label><input type="checkbox"> <span>Acepto los términos y condiciones.</span></label>
             </div>
         </div>
     </section>
@@ -541,7 +619,7 @@
         <div class="footer__content footer__desktop container ">
             <div class="footer__work  wow animate__animated animate__fadeInLeft">
                 <h4>Trabaja con nosotros</h4>
-                <span>¿Te unes al equipo?</span>
+                <a href="te-unes-a-nuestro-equipo.html">¿Te unes al equipo?</a>
                 <a href="contacto.html">Contácto</a>
             </div>
             <div class="footer__legal  wow animate__animated animate__fadeInLeft">
@@ -651,7 +729,7 @@
             });
         });
     </script>
-    
+
 </body>
 
 </html>

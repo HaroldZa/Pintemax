@@ -29,6 +29,7 @@ var swiper = new Swiper(".slide-content_text", {
     slidesPerView: 4,
     spaceBetween: 25,
     centerSlide: 'true',
+    loop: true,
     fade: 'true',
     grabCursor: 'true',
     navigation: {
@@ -51,6 +52,7 @@ var swiper = new Swiper(".slide-content_text", {
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
+    loop: true,
     spaceBetween: 30,
     navigation: {
         nextEl: ".hero__btn_slider_next",
