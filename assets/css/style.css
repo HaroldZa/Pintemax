@@ -461,16 +461,29 @@ h4 {
     transition: .4s;
 }
 
-
-
-
 #hero__options_catalog:hover{
     transform: scale(1.02)
 }
 
-#hero__nav_menu a:hover{
-    color: #b78300ce;
-}
+#hero__nav_menu a {
+    position: relative;
+  }
+  #hero__nav_menu a:before {
+    content: attr(data-hover);
+  }
+  #hero__nav_menu a:after {
+    content: attr(data-hover);
+    position: absolute;
+    color: #b98a14ce;
+    left: 0;
+    width: 0;
+    transition: width .5s;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  #hero__nav_menu a:hover:after {
+    width: 100%;
+  }
 
 .hero__options,
 #hero__options_icons {
@@ -960,6 +973,9 @@ h4 {
     .footer{
         height: auto;
     }
+    .footer__work h4{
+    padding-bottom: 0;
+}
     .icon_social{
         position: absolute;
         top: 10%;
@@ -1147,7 +1163,8 @@ h4 {
     .gallery__card span {
         font-size: 1.7rem;
     }
-    .button-container-contact{
+    .button-container-contact,
+    .mas_contact{
         font-size: 1.3rem;
     }
 }

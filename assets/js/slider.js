@@ -53,6 +53,7 @@ var swiper = new Swiper(".slide-content_text", {
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     loop: true,
+    speed: 800,
     spaceBetween: 30,
     navigation: {
         nextEl: ".hero__btn_slider_next",

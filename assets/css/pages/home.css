@@ -260,10 +260,10 @@
   top: 53%;
   left: 43.5%;
   transform: translate(-50%, -50%);
-  transition: .2s;
+  transition: .7s;
 }
 .btn_free:hover{
-  transform: scale(1.01);
+  filter: brightness(1.1);
   transition: .2s;
 }
 /* Slider Cards */
@@ -360,8 +360,9 @@
   transition: .7s; 
 }
 
-.swiper-button-next_text:active{
-  
+.swiper-button-next_text:active,
+.swiper-button-prev_text:active{
+  filter: brightness(1.6);
 }
 
 .swiper-button-prev {
