@@ -48,7 +48,7 @@ summary {
 .main__multi_title {
     padding-top: .4rem;
     padding-left: 5rem;
-    font-size: 3rem;
+    font-size: 2.8rem;
     color: #004481;
     font-weight: bold;
 }
@@ -67,6 +67,7 @@ details{
     -o-transition: 2s;
     -webkit-transition: 2s;
     transition: 2s;
+    
 }
 
 details[open] {
@@ -76,7 +77,8 @@ details[open] {
 }
 
 details p{
-  
+  animation: fadeInRight;
+  animation-duration: 2s; 
 }
 
 details[open] p {
