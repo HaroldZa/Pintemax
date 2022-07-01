@@ -900,6 +900,9 @@ h4 {
     .footer__menu_mobile > .footer__icons{
         width: auto;
     }
+    .footer__icons img {
+        max-width: 4rem;
+    }
     .footer__menu_mobile .icons{
        margin: 0;
     }
@@ -1102,9 +1105,7 @@ h4 {
         padding: 0;
     }
 
-    .footer__icons img {
-        max-width: 4rem;
-    }
+    
 
     .footer__border {
         width: 200%;
