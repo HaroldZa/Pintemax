@@ -498,7 +498,7 @@ h4 {
   #hero__nav_menu a:after {
     content: attr(data-hover);
     position: absolute;
-    color: #9d17a9;
+    color: #B666D2;
     left: 0;
     width: 0;
     transition: width .5s;
