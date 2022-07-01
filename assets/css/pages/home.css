@@ -134,6 +134,29 @@
   display: inline-block;
   text-align: center;
   width: 60%;
+  transition: all .3s ease-in-out;
+  animation: zoomIn;
+  animation-duration: 1s;
+}
+
+
+.main__img:hover{
+  transform: scale(.99) translateZ(0);
+  backface-visibility: hidden;
+  transition: all .3s ease-in-out;
+}
+.main__img .main__img_text,
+.main__img .main__img_text span{
+  transition: all .5s ease-in-out;
+}
+.main__img:hover .main__img_text{
+  color: #e0e0e0;
+  transition: all .5s ease-in-out;
+}
+
+.main__img:hover .main__img_text span{
+  filter: brightness(1.1);
+  transition: all .5s ease-in-out;
 }
 
 .main__img_img {
@@ -801,12 +824,16 @@
 .social__card {
   position: relative;
   display: inline-block;
+  transition: 1s;
 }
-
-.social__card > img:nth-child(2):hover{
-  filter: brightness(1.05);
+.social__card:hover{
+  transform: scale(1.08);
+  transition: 1s;
+  cursor: pointer;
 }
-
+.social__card:hover span{
+  color: #ebebeb;
+}
 .social__card img {
   width: 70%;
 }

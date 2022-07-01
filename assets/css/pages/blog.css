@@ -81,10 +81,21 @@ img{
     column-gap: 1.5rem;
     row-gap: 3rem;
 }
+.card-wrapper a:hover{
+    cursor: pointer;
+}
+.post{
+    transition: .8s;
+}
+.post:hover{
+    transform: scale(1.02);
+    transition: .8s;
+}
 .post__category{
     position: absolute;
-    top: 6%;
-    left: -2%;
+    top: 6rem;
+    left: -2rem;
+    transform: none !important;
 }
 .category_circle{
     position: relative;
@@ -209,7 +220,6 @@ img{
         font-size: 1.8rem;
     }
 }
-
 @media (max-width: 990px) {
     .card__content{
         display: block;
@@ -225,6 +235,9 @@ img{
         top: -1.5%;
         left: 25%;
         transform: translateX(-50%);
+    }
+    .post:hover{
+        transform: none;
     }
     .contact__content{
         display: block;
