@@ -931,6 +931,9 @@
 
 .contact__terms {
   margin-top: 1.5rem;
+}
+
+.contact__terms label{
   display: flex;
   align-items: center;
 }
