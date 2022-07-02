@@ -1106,13 +1106,6 @@
   .contact {
     position: relative;
   }
-
-  .hero__icon {
-    position: absolute;
-    width: 15%;
-    top: -7rem;
-  }
-
   .contact__content h2 {
     font-size: 4rem;
   }
@@ -1389,11 +1382,6 @@
     font-size: 1.8rem;
     left: 55%;
   }
-
-  .hero__icon {
-    width: 17%;
-  }
-
   .contact {
     background-image: url(../../images/fr_4.png);
   }
@@ -1443,10 +1431,6 @@
     margin-top: 2rem;
   }
 
-  .hero__icon {
-    width: 14rem;
-  }
-
   .hero__card_text {
     padding-left: 2rem;
   }
@@ -1479,8 +1463,6 @@
 }
 
 @media (max-width: 500px) {
-
-  
   .hero {
     background-image: url(../../images/fr_2.png);
     height: 60rem;

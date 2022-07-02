@@ -1010,6 +1010,13 @@ h4 {
 }
 
 @media (max-width: 940px) {
+    .hero__icon{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        width: 11.8rem;
+    }
     .footer{
         height: auto;
     }
@@ -1181,6 +1188,9 @@ h4 {
 .hero {
     height: 100%;
     background-size: 100% 60%;
+  }
+  .hero__icon{
+    width: 8.8rem !important;
   }
 .hero__border{
         top: 35%;

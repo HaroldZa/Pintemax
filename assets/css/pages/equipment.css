@@ -25,6 +25,20 @@ img{
 }
 .main__content img{
     width: 80%;
+    transition: .7s;
+    animation: fadeInLeft;
+    animation-duration: 1s;
+}
+.main__content img:hover{
+  transform: scale(1.02);
+  transition: .7s;
+}
+.main__text_footer{
+  transition: .7s;
+}
+.main__text_footer:hover{
+  transform: scale(1.02) !important;
+  transition: .7s;
 }
 .main__text h4{
     font-family: BuloRounded-Black;

@@ -148,6 +148,18 @@
     font-size: 1.8rem;
     color: var(--white);
 }
+.button-container-contact,
+.mas_contact{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+.button-container-contact{
+    width: 45%;
+    margin: 0 auto;
+    height: 6rem;
+}
 .form p{
     font-family: Gotham-book;
     font-weight: 400;
