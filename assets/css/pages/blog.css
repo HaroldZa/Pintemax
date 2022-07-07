@@ -18,6 +18,15 @@ img{
     align-items: center;
     column-gap: 2rem;
 }
+.card__content > img{
+    animation: fadeInLeft;
+    animation-duration: 1s;
+    transition: .7s;
+}
+.card__content > img:hover{
+    transform: scale(1.02);
+    transition: .7s;
+}
 .card__text{
     padding-top: 5rem;
     padding-left: 4rem;

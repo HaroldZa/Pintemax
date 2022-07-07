@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,15 @@
     <title>Proyectos</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/pages/projects.css">
 </head>
 
 <body>
     <header class="hero">
-         <!-- Menu -->
-         <nav class="hero__nav container desktop">
+        <!-- Menu -->
+        <nav class="hero__nav container desktop">
             <a href="index.html"><img id="hero__logo" src="assets/images/l_1.png" alt="Pintemax"></a>
             <div id="hero__nav_menu">
                 <a href="servicios.html" data-hover="Servicios"></a>
@@ -183,7 +185,37 @@
         <div class="hero__border"></div>
     </header>
 
+
     <main class="main">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <h1 id="modal_title"></h1>
+
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="modal-content select" id="after">
+                        <h2>Antes</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="modal-content select" id="before">
+                        <h2>Despues</h2>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class=" mySwiper">
+                <div class="swiper-wrapper"></div>
+            </div>
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
         <img class="main__cards_img svg_mobile" src="assets/images/p_3.png" alt="">
         <div class="main__content container">
             <div class="main__block">
@@ -193,8 +225,8 @@
                             <img src="assets/images/b_.png" alt="">
                             <span>Antes</span>
                         </div>
-                        <div class="main__block_img wow animate__animated animate__fadeInLeft">
-                            <img class="zoom" src="assets/images/bt_2.png" alt="">
+                        <div class="main__block_img animate__animated animate__fadeInLeft">
+                            <img id="project1" class="zoom" src="assets/images/bt_2.png" alt="" onclick="modal(this.id)">
                             <span>Proyecto 1</span>
                         </div>
                     </div>
@@ -204,32 +236,40 @@
                             <span>Después</span>
                         </div>
                         <div class="main__block_img">
-                            <img class="zoom" src="assets/images/bt_3.png" alt="">
+                            <img id="project1_before" class="zoom" src="assets/images/bt_3.png" alt="" onclick="modal(this.id)">
                             <span>Proyecto 1</span>
                         </div>
                     </div>
                 </div>
                 <div class="main__block_text">
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                    anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet
+                    tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
                 </div>
             </div>
             <div class="main__block">
                 <div class="main__block_cards">
                     <div class="main__block_card wow animate__animated animate__fadeInLeft zoom">
                         <div class="main__block_img">
-                            <img src="assets/images/bt_2.png" alt="">
-                            <span>Proyecto 1</span>
+                            <img id="project2" src="assets/images/bt_2.png" alt="" onclick="modal(this.id)">
+                            <span>Proyecto 2</span>
                         </div>
                     </div>
                     <div class="main__block_card wow animate__animated animate__fadeInRight zoom">
                         <div class="main__block_img">
-                            <img src="assets/images/bt_3.png" alt="">
-                            <span>Proyecto 1</span>
+                            <img id="project2_before" src="assets/images/bt_3.png" alt="" onclick="modal(this.id)">
+                            <span>Proyecto 2</span>
                         </div>
                     </div>
                 </div>
                 <div class="main__block_text">
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                    anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet
+                    tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.
                 </div>
             </div>
         </div>
@@ -262,7 +302,7 @@
     <footer class="footer">
         <div class="footer__border"></div>
         <div class="footer__content footer__desktop container">
-            <div class="footer__work wow animate__animated animate__fadeInLeft" >
+            <div class="footer__work wow animate__animated animate__fadeInLeft">
                 <h4>Trabaja con nosotros</h4>
                 <a href="te-unes-a-nuestro-equipo.html">¿Te unes al equipo?</a>
                 <a href="contacto.html">Contácto</a>
@@ -299,68 +339,71 @@
 
         <div class="footer__content footer__mobile container">
             <img class="hero__icon" src="assets/images/icons/w_1.png" alt="">
-                <div class="footer__work wow animate__animated animate__fadeInLeft">
-                    <div id="1" class="footer__title_top">
-                        <h4>Trabaja con nosotros</h4>
-                        <img class="footer__icon" id="img1" src="assets/images/icons/plus.png" alt="">
-                    </div>
-                    <nav class="footer__nav">
-                        <ul>
-                            <li><a href="te-unes-a-nuestro-equipo.html">Trabajadores</a></li>
-                            <li><a href="#">Asociados</a></li>
-                            <li><a href="contacto.html">Contacto</a></li>
-                        </ul>
-                    </nav>
+            <div class="footer__work wow animate__animated animate__fadeInLeft">
+                <div id="1" class="footer__title_top">
+                    <h4>Trabaja con nosotros</h4>
+                    <img class="footer__icon" id="img1" src="assets/images/icons/plus.png" alt="">
                 </div>
-                <div class="footer__sections wow animate__animated animate__fadeInLeft">
-                    <div id="2" class="footer__title_top">
-                        <h4>Otras secciones</h4>
-                        <img class="footer__icon" id="img2" src="assets/images/icons/plus.png" alt="">
-                    </div>
-                    <nav class="footer__nav">
-                        <ul>
-                            <li><a href="#">Sección 1</a></li>
-                            <li><a href="#">Sección 2</a></li>
-                            <li><a href="#">Seccióon 3</a></li>
-                        </ul>
-                    </nav>
+                <nav class="footer__nav">
+                    <ul>
+                        <li><a href="te-unes-a-nuestro-equipo.html">Trabajadores</a></li>
+                        <li><a href="#">Asociados</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__sections wow animate__animated animate__fadeInLeft">
+                <div id="2" class="footer__title_top">
+                    <h4>Otras secciones</h4>
+                    <img class="footer__icon" id="img2" src="assets/images/icons/plus.png" alt="">
                 </div>
-                <div class="footer__legal wow animate__animated animate__fadeInLeft">
-                    <div id="3" class="footer__title_top">
-                        <h4>Legal</h4>
-                        <img class="footer__icon" id="img3" src="assets/images/icons/plus.png" alt="">
-                    </div>
-                    <nav class="footer__nav">
-                        <ul>
-                            <li><a href="terminos-y-condiciones.html">Términos y condiciones</a></li>
-                            <li><a href="politica-de-privacidad.html">Política de privacidad</a></li>
-                            <li><a href="politica-de-cookies.html">Política de cookies</a></li>
-                        </ul>
-                    </nav>
+                <nav class="footer__nav">
+                    <ul>
+                        <li><a href="#">Sección 1</a></li>
+                        <li><a href="#">Sección 2</a></li>
+                        <li><a href="#">Seccióon 3</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__legal wow animate__animated animate__fadeInLeft">
+                <div id="3" class="footer__title_top">
+                    <h4>Legal</h4>
+                    <img class="footer__icon" id="img3" src="assets/images/icons/plus.png" alt="">
                 </div>
-                <div class="footer__follow wow animate__animated animate__fadeInLeft">
-                    <div class="footer__icons">
-                        <ul class="icons">
-                            <li>
-                                <a href="#"><img class="icon" src="assets/images/icons/rs_1.png" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img class="icon" src="assets/images/icons/rs_2.png" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img class="icon" src="assets/images/icons/rs_3.png" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="#"><img class="icon" src="assets/images/icons/rs_4.png" alt=""></a>
-                            </li>
-                        </ul>
-                    </div>
+                <nav class="footer__nav">
+                    <ul>
+                        <li><a href="terminos-y-condiciones.html">Términos y condiciones</a></li>
+                        <li><a href="politica-de-privacidad.html">Política de privacidad</a></li>
+                        <li><a href="politica-de-cookies.html">Política de cookies</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__follow wow animate__animated animate__fadeInLeft">
+                <div class="footer__icons">
+                    <ul class="icons">
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/rs_1.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/rs_2.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/rs_3.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="icon" src="assets/images/icons/rs_4.png" alt=""></a>
+                        </li>
+                    </ul>
                 </div>
-                <span class="footer__copyright">© 2021 Pintemax- Todos los derechos reservados</span>
+            </div>
+            <span class="footer__copyright">© 2021 Pintemax- Todos los derechos reservados</span>
         </div>
     </footer>
 
     <script src="assets/libs/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/libs/swiper-bundle.min.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
+
 </html>
