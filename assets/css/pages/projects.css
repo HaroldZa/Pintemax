@@ -16,7 +16,9 @@
 .main__block_img > img{
     width: 70%;
 }
-
+.main__block_img > div{
+  display: none;
+}
 .main__block_card{
     text-align: center;
 }

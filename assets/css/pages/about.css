@@ -195,10 +195,15 @@
 }
 
 .team__card img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     object-fit: cover;
     object-position: center;
+}
+
+.swiper{
+    position: relative;
+    z-index: 10;
 }
 
 .swiper-pagination {
@@ -226,6 +231,16 @@
     margin: 0 auto;
     position: relative;
     z-index: 2;
+}
+
+#team__card_zoom{
+    margin-left: 1rem;
+    padding-top: -1rem;
+    text-align: center;
+}
+
+#team__card_zoom > img {
+    padding-bottom: 1rem;
 }
 
 .team__card_expand {

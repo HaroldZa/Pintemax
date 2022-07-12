@@ -190,21 +190,13 @@
         <!-- The Modal -->
         <div id="myModal" class="modal">
             <!-- The Close Button -->
-            <span class="close">&times;</span>
+            <span class="close" onclick="closeModal()">&times;</span>
 
             <!-- Modal Content (The Image) -->
             <h1 id="modal_title"></h1>
 
             <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img class="modal-content select" id="after">
-                        <h2>Antes</h2>
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="modal-content select" id="before">
-                        <h2>Despues</h2>
-                    </div>
+                <div class="swiper-wrapper" id="images_slide" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -225,8 +217,25 @@
                             <img src="assets/images/b_.png" alt="">
                             <span>Antes</span>
                         </div>
-                        <div class="main__block_img animate__animated animate__fadeInLeft">
-                            <img id="project1" class="zoom" src="assets/images/bt_2.png" alt="" onclick="modal(this.id)">
+                        <div class="main__block_img animate__animated animate__fadeInLeft" onclick="modal(this)">
+                            <div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/bt_2.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/1_.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/2_.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/3_.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/blog.png">
+                                </div>
+                            </div>
+                            <img class="zoom" src="assets/images/bt_2.png" alt="" >
                             <span>Proyecto 1</span>
                         </div>
                     </div>
@@ -235,8 +244,25 @@
                             <img src="assets/images/bt_1.png" alt="">
                             <span>Después</span>
                         </div>
-                        <div class="main__block_img">
-                            <img id="project1_before" class="zoom" src="assets/images/bt_3.png" alt="" onclick="modal(this.id)">
+                        <div class="main__block_img" onclick="modal(this)">
+                            <div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/bt_3.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/3_.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/2_.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/blog.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/1_.png">
+                                </div>
+                            </div>
+                            <img class="zoom" src="assets/images/bt_3.png" alt="">
                             <span>Proyecto 1</span>
                         </div>
                     </div>
@@ -252,14 +278,48 @@
             <div class="main__block">
                 <div class="main__block_cards">
                     <div class="main__block_card wow animate__animated animate__fadeInLeft zoom">
-                        <div class="main__block_img">
-                            <img id="project2" src="assets/images/bt_2.png" alt="" onclick="modal(this.id)">
+                        <div class="main__block_img" onclick="modal(this)">
+                            <div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/bt_2.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/blog.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/3_.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/2_.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/1_.png">
+                                </div>
+                            </div>
+                            <img src="assets/images/bt_2.png" alt="">
                             <span>Proyecto 2</span>
                         </div>
                     </div>
                     <div class="main__block_card wow animate__animated animate__fadeInRight zoom">
-                        <div class="main__block_img">
-                            <img id="project2_before" src="assets/images/bt_3.png" alt="" onclick="modal(this.id)">
+                        <div class="main__block_img" onclick="modal(this)">
+                            <div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/bt_2.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/2_.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/1_.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/blog.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="modal-content select" src="assets/images/3_.png">
+                                </div>
+                            </div>
+                            <img src="assets/images/bt_3.png" alt="" >
                             <span>Proyecto 2</span>
                         </div>
                     </div>
